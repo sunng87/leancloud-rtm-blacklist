@@ -14,7 +14,7 @@ AV.Cloud.define("_conversationRemove", function(request, response) {
   query.equalTo("convId", cid);
 
   query.find({
-	  success: function(results){
+    success: function(results){
       var blacklist;
       if (results.length > 0) {
         blacklist = results[0];
@@ -25,24 +25,24 @@ AV.Cloud.define("_conversationRemove", function(request, response) {
 
       // 将这次踢出的用户加入黑名单
       members.forEach(function(m){
-  	    blacklist.addUnique("m", m);
+        blacklist.addUnique("m", m);
       });
 
       blacklist.save(null, {
-          success: function(){
-            response.success({});
-          },
-          error: function(e) {
-            console.log(e);
-            response.success({});
-          }
+        success: function(){
+          response.success({});
+        },
+        error: function(e) {
+          console.log(e);
+          response.success({});
+        }
       });
-	  },
-	  error: function(e) {
+    },
+    error: function(e) {
       console.log(e);
       response.success({});
-	  }
-	});
+    }
+  });
 });
 
 AV.Cloud.define("_conversationAdd", function(request, response) {
@@ -64,9 +64,9 @@ AV.Cloud.define("_conversationAdd", function(request, response) {
   query.find({
     success: function(results) {
       if (results.length > 0) {
-          response.success({reject: true});
+        response.success({reject: true});
       } else {
-          response.success({});
+        response.success({});
       }
     },
     error : function() {
