@@ -1,0 +1,8 @@
+{
+    "applicationName" : "FIXME",
+    "applicationId": "FIXME",
+    "applicationKey": "FIXME",
+    "global": {
+        "avVersion": "0.3.1"
+    }
+}
