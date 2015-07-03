@@ -1,6 +1,6 @@
 # LeanCloud 实时通信聊天室黑名单云代码范例
 
-[![Awesome LeanCloud](http://leancloud.sexy/badge.svg)](http://leancloud.sexy)
+[![Awesome LeanCloud](https://img.shields.io/badge/Awesome-LeanCloud-47615d.svg)](http://leancloud.sexy)
 
 ## 原理
 
